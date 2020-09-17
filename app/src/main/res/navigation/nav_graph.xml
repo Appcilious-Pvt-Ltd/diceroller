@@ -3,26 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/ThreeDiceFragment">
+
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.diceroller.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+        android:id="@+id/OneDiceFragment"
+        android:name="com.example.diceroller.dicecount.OneDiceFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_one_dice">
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.diceroller.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+        android:id="@+id/TwoDiceFragment"
+        android:name="com.example.diceroller.dicecount.TwoDiceFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_two_dice">
     </fragment>
+    <fragment
+        android:id="@+id/ThreeDiceFragment"
+        android:name="com.example.diceroller.dicecount.ThreeDiceFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_three_dice">
+    </fragment>
+    <fragment
+        android:id="@+id/FourDiceFragment"
+        android:name="com.example.diceroller.dicecount.FourDiceFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_four_dice">
+    </fragment>
+    <fragment
+        android:id="@+id/FiveDiceFragment"
+        android:name="com.example.diceroller.dicecount.FiveDiceFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_five_dice">
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/FirstFragment"-->
+<!--        android:name="com.example.diceroller.FirstFragment"-->
+<!--        android:label="@string/first_fragment_label"-->
+<!--        tools:layout="@layout/fragment_first">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
+<!--            app:destination="@id/SecondFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/SecondFragment"-->
+<!--        android:name="com.example.diceroller.SecondFragment"-->
+<!--        android:label="@string/second_fragment_label"-->
+<!--        tools:layout="@layout/fragment_second">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/FirstFragment" />-->
+<!--    </fragment>-->
 </navigation>
