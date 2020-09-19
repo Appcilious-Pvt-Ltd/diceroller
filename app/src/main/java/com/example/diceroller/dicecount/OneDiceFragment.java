@@ -1,30 +1,20 @@
 package com.example.diceroller.dicecount;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.ActionMenuItemView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.diceroller.R;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static com.example.diceroller.R.id.action_one;
 
 public class OneDiceFragment extends Fragment {
 
@@ -74,7 +64,7 @@ public class OneDiceFragment extends Fragment {
             );
             Log.d("Timer", "onOptionsItemSelected: Dice Rolled for secs" + time);
         }
-        if(id == R.id.action_stop){
+        if(id == R.id.action_stop) {
 //            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
 //            roll.setVisibility(View.VISIBLE);
 //            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
