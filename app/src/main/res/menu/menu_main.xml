@@ -9,7 +9,7 @@
         android:orderInCategory="100"
         android:title="Stop Roll"
         app:showAsAction="always"
-        android:visible="true"/>
+        android:visible="false"/>
 
     <item
         android:icon="@drawable/roll"

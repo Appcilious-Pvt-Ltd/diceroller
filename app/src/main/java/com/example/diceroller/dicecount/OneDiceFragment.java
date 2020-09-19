@@ -1,22 +1,14 @@
 package com.example.diceroller.dicecount;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.ActionMenuItemView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.diceroller.R;
 
@@ -24,12 +16,13 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.example.diceroller.R.id.action_one;
-
 public class OneDiceFragment extends Fragment {
 
     ImageView diceImage;
     Random random = new Random();
+
+    Integer[] images = {R.drawable.dice_1,R.drawable.dice_2,R.drawable.dice_3,R.drawable.dice_4,R.drawable.dice_5,R.drawable.dice_6};
+
     int time = 1;
     Timer timer;
 
@@ -74,7 +67,7 @@ public class OneDiceFragment extends Fragment {
             );
             Log.d("Timer", "onOptionsItemSelected: Dice Rolled for secs" + time);
         }
-        if(id == R.id.action_stop){
+        if(id == R.id.action_stop) {
 //            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
 //            roll.setVisibility(View.VISIBLE);
 //            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
@@ -105,28 +98,8 @@ public class OneDiceFragment extends Fragment {
 
     class RollDice extends TimerTask{
         private void rollDice() {
-            int randomNumber = random.nextInt(6) + 1;
-
-            switch (randomNumber) {
-                case 1:
-                    diceImage.setImageResource(R.drawable.dice_1);
-                    break;
-                case 2:
-                    diceImage.setImageResource(R.drawable.dice_2);
-                    break;
-                case 3:
-                    diceImage.setImageResource(R.drawable.dice_3);
-                    break;
-                case 4:
-                    diceImage.setImageResource(R.drawable.dice_4);
-                    break;
-                case 5:
-                    diceImage.setImageResource(R.drawable.dice_5);
-                    break;
-                case 6:
-                    diceImage.setImageResource(R.drawable.dice_6);
-                    break;
-            }
+            int randomNumber = random.nextInt(6);
+            diceImage.setImageResource(images[randomNumber]);
         }
         @Override
         public void run() {
