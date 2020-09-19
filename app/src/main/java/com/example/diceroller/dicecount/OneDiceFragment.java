@@ -20,6 +20,9 @@ public class OneDiceFragment extends Fragment {
 
     ImageView diceImage;
     Random random = new Random();
+
+    Integer[] images = {R.drawable.dice_1,R.drawable.dice_2,R.drawable.dice_3,R.drawable.dice_4,R.drawable.dice_5,R.drawable.dice_6};
+
     int time = 1;
     Timer timer;
 
@@ -95,28 +98,8 @@ public class OneDiceFragment extends Fragment {
 
     class RollDice extends TimerTask{
         private void rollDice() {
-            int randomNumber = random.nextInt(6) + 1;
-
-            switch (randomNumber) {
-                case 1:
-                    diceImage.setImageResource(R.drawable.dice_1);
-                    break;
-                case 2:
-                    diceImage.setImageResource(R.drawable.dice_2);
-                    break;
-                case 3:
-                    diceImage.setImageResource(R.drawable.dice_3);
-                    break;
-                case 4:
-                    diceImage.setImageResource(R.drawable.dice_4);
-                    break;
-                case 5:
-                    diceImage.setImageResource(R.drawable.dice_5);
-                    break;
-                case 6:
-                    diceImage.setImageResource(R.drawable.dice_6);
-                    break;
-            }
+            int randomNumber = random.nextInt(6);
+            diceImage.setImageResource(images[randomNumber]);
         }
         @Override
         public void run() {
