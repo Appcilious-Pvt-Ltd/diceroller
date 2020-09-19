@@ -16,4 +16,12 @@
     <string name="red">R :</string>
     <string name="green">G :</string>
     <string name="blue">B :</string>
+    <string-array name="colorsList">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Cyan</item>
+        <item>Yellow</item>
+        <item>Magenta</item>
+    </string-array>
 </resources>

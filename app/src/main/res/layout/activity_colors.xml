@@ -42,9 +42,9 @@
     <!--    <include layout="@layout/content_main" />-->
 
     <FrameLayout
-        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/host_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/host_fragment"/>
+        android:layout_marginTop="?attr/actionBarSize" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

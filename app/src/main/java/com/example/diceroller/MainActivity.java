@@ -93,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_3sec :
                 Toast.makeText(this, "Roll Time  : 3 Sec", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.action_dice_color :
-                showFragment(new colors());
         }
 
         return super.onOptionsItemSelected(item);
