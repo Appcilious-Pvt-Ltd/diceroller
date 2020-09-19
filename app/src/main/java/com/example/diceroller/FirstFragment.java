@@ -52,8 +52,8 @@ public class FirstFragment extends Fragment {
             }
         });
 
-        if(r1.isChecked()) {
-
+        if(r2.isChecked()) {
+            // Hide the Spinner and set the visibility of Seek bars
         }
 
         return view;
