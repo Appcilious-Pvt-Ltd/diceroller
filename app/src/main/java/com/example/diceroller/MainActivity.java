@@ -1,33 +1,27 @@
 package com.example.diceroller;
 
 import android.os.Bundle;
-
-import com.example.diceroller.dicecount.FiveDiceFragment;
-import com.example.diceroller.dicecount.FourDiceFragment;
-import com.example.diceroller.dicecount.OneDiceFragment;
-import com.example.diceroller.dicecount.ThreeDiceFragment;
-import com.example.diceroller.dicecount.TwoDiceFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import com.example.diceroller.dicecount.FiveDiceFragment;
+import com.example.diceroller.dicecount.FourDiceFragment;
+import com.example.diceroller.dicecount.OneDiceFragment;
+import com.example.diceroller.dicecount.ThreeDiceFragment;
+import com.example.diceroller.dicecount.TwoDiceFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,48 +48,54 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch(item.getItemId()) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_one) {
-            Toast.makeText(this, "One Dice", Toast.LENGTH_SHORT).show();
-            showFragment(new OneDiceFragment());
-        }
-        else if(id == R.id.action_two){
-            Toast.makeText(this, "Two Dice", Toast.LENGTH_SHORT).show();
-            showFragment(new TwoDiceFragment());
-        }
-        else if(id == R.id.action_three){
-            Toast.makeText(this, "Three Dice", Toast.LENGTH_SHORT).show();
-            showFragment(new ThreeDiceFragment());
-        }
-        else if(id == R.id.action_four){
-            Toast.makeText(this, "Four Dice", Toast.LENGTH_SHORT).show();
-            showFragment(new FourDiceFragment());
-        }
-        else if(id == R.id.action_five){
-            Toast.makeText(this, "Five Dice", Toast.LENGTH_SHORT).show();
-            showFragment(new FiveDiceFragment());
+            case R.id.action_one:
+//                Toast.makeText(this, "One Dice", Toast.LENGTH_SHORT).show();
+                showFragment(new OneDiceFragment());
+                break;
+
+            case R.id.action_two:
+//                Toast.makeText(this, "Two Dice", Toast.LENGTH_SHORT).show();
+                showFragment(new TwoDiceFragment());
+                break;
+
+            case R.id.action_three:
+//                Toast.makeText(this, "Three Dice", Toast.LENGTH_SHORT).show();
+                showFragment(new ThreeDiceFragment());
+                break;
+
+            case R.id.action_four :
+//                Toast.makeText(this, "Four Dice", Toast.LENGTH_SHORT).show();
+                showFragment(new FourDiceFragment());
+                break;
+
+            case R.id.action_five :
+//                Toast.makeText(this, "Five Dice", Toast.LENGTH_SHORT).show();
+                showFragment(new FiveDiceFragment());
+                break;
+
+            case R.id.action_1sec :
+                Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.action_2sec :
+                Toast.makeText(this, "Roll Time  : 2 Sec", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.action_3sec :
+                Toast.makeText(this, "Roll Time  : 3 Sec", Toast.LENGTH_SHORT).show();
+                break;
         }
 
-        else if(id == R.id.action_1sec){
-            Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
-        }
-        else if(id == R.id.action_2sec){
-            Toast.makeText(this, "Roll Time  : 2 Sec", Toast.LENGTH_SHORT).show();
-        }
-        else if(id == R.id.action_3sec){
-            Toast.makeText(this, "Roll Time  : 3 Sec", Toast.LENGTH_SHORT).show();
-        }
         return super.onOptionsItemSelected(item);
     }
 
-    public void showFragment(Fragment fragment){
+    public void showFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-
 
 }

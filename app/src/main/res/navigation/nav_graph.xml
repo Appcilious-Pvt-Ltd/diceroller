@@ -12,30 +12,36 @@
         android:label="@string/app_name"
         tools:layout="@layout/fragment_one_dice">
     </fragment>
+
     <fragment
         android:id="@+id/TwoDiceFragment"
         android:name="com.example.diceroller.dicecount.TwoDiceFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_two_dice">
     </fragment>
+
     <fragment
         android:id="@+id/ThreeDiceFragment"
         android:name="com.example.diceroller.dicecount.ThreeDiceFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_three_dice">
     </fragment>
+
     <fragment
         android:id="@+id/FourDiceFragment"
         android:name="com.example.diceroller.dicecount.FourDiceFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_four_dice">
     </fragment>
+
     <fragment
         android:id="@+id/FiveDiceFragment"
         android:name="com.example.diceroller.dicecount.FiveDiceFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_five_dice">
     </fragment>
+
+
 <!--    <fragment-->
 <!--        android:id="@+id/FirstFragment"-->
 <!--        android:name="com.example.diceroller.FirstFragment"-->
@@ -56,4 +62,5 @@
 <!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
 <!--            app:destination="@id/FirstFragment" />-->
 <!--    </fragment>-->
+
 </navigation>
