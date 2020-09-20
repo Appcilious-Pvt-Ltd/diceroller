@@ -82,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
 
+            case R.id.action_about_us :
+//                Toast.makeText(this, "Five Dice", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(this, aboutActivity.class);
+                startActivity(intent1);
+                break;
+
             case R.id.action_1sec :
                 Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
                 break;
