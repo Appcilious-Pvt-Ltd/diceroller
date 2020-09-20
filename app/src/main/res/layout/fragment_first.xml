@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/predefined"
             android:textSize="25sp"
-            android:checked="true"
+            android:checked="false"
             android:padding="10dp" />
 
         <RadioButton
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_margin="15dp"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/custom_colors"

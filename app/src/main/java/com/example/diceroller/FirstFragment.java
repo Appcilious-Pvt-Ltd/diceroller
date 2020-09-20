@@ -143,8 +143,6 @@ public class FirstFragment extends Fragment {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress,
                                       boolean fromUser) {
-
-
             int R,G,B;
 
             R = r.getProgress();
