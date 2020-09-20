@@ -15,7 +15,7 @@ public class colorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if(savedInstanceState == null){
             FirstFragment firstFragment = new FirstFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

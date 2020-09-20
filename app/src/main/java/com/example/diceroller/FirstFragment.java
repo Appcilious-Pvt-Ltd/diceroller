@@ -57,58 +57,58 @@ public class FirstFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         colors.setAdapter(adapter);
 
-colors.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-    switch (i){
-        case 0: colorShow.setBackgroundColor(Color.RED);
-            changeColor(Color.RED);
-        break;
-        case 1: colorShow.setBackgroundColor(Color.GREEN);
-            changeColor(Color.GREEN);
-        break;
-        case 2: colorShow.setBackgroundColor(Color.BLUE);
-            changeColor(Color.BLUE);
-            break;
-        case 3: colorShow.setBackgroundColor(Color.CYAN);
-            changeColor(Color.CYAN);
-            break;
-        case 4: colorShow.setBackgroundColor(Color.YELLOW);
-            changeColor(Color.YELLOW);
-            break;
-        case 5: colorShow.setBackgroundColor(Color.MAGENTA);
-            changeColor(Color.MAGENTA);
-            break;
-        default: colorShow.setBackgroundColor(Color.RED);
-        }
-    }
+        colors.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0: colorShow.setBackgroundColor(Color.RED);
+                        changeColor(Color.RED);
+                        break;
+                    case 1: colorShow.setBackgroundColor(Color.GREEN);
+                        changeColor(Color.GREEN);
+                        break;
+                    case 2: colorShow.setBackgroundColor(Color.BLUE);
+                        changeColor(Color.BLUE);
+                        break;
+                    case 3: colorShow.setBackgroundColor(Color.CYAN);
+                        changeColor(Color.CYAN);
+                        break;
+                    case 4: colorShow.setBackgroundColor(Color.YELLOW);
+                        changeColor(Color.YELLOW);
+                        break;
+                    case 5: colorShow.setBackgroundColor(Color.MAGENTA);
+                        changeColor(Color.MAGENTA);
+                        break;
+                    default: colorShow.setBackgroundColor(Color.RED);
+                }
+            }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
-    }
-});
+            }
+        });
         return view;
     }
 
-public void changeColor(int color){
-    Drawable dice1 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_1);
-    dice1 = DrawableCompat.wrap(dice1);
-    DrawableCompat.setTint(dice1,color);
-    Drawable dice2 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_2);
-    dice2 = DrawableCompat.wrap(dice2);
-    DrawableCompat.setTint(dice2,color);
-    Drawable dice3 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_3);
-    dice3 = DrawableCompat.wrap(dice3);
-    DrawableCompat.setTint(dice3,color);
-    Drawable dice4 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_4);
-    dice4 = DrawableCompat.wrap(dice4);
-    DrawableCompat.setTint(dice4,color);
-    Drawable dice5 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_5);
-    dice5 = DrawableCompat.wrap(dice5);
-    DrawableCompat.setTint(dice5,color);
-    Drawable dice6 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_6);
-    dice6 = DrawableCompat.wrap(dice6);
-    DrawableCompat.setTint(dice6,color);
-}
+    public void changeColor(int color){
+        Drawable dice1 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_1);
+        dice1 = DrawableCompat.wrap(dice1);
+        DrawableCompat.setTint(dice1,color);
+        Drawable dice2 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_2);
+        dice2 = DrawableCompat.wrap(dice2);
+        DrawableCompat.setTint(dice2,color);
+        Drawable dice3 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_3);
+        dice3 = DrawableCompat.wrap(dice3);
+        DrawableCompat.setTint(dice3,color);
+        Drawable dice4 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_4);
+        dice4 = DrawableCompat.wrap(dice4);
+        DrawableCompat.setTint(dice4,color);
+        Drawable dice5 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_5);
+        dice5 = DrawableCompat.wrap(dice5);
+        DrawableCompat.setTint(dice5,color);
+        Drawable dice6 = ContextCompat.getDrawable(getActivity(), R.drawable.dice_6);
+        dice6 = DrawableCompat.wrap(dice6);
+        DrawableCompat.setTint(dice6,color);
+    }
 }
