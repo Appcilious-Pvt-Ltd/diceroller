@@ -3,8 +3,6 @@ package com.example.diceroller;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,18 +13,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.diceroller.dicecount.ThreeDiceFragment;
-
-public class FirstFragment extends Fragment {
+public class ColorFragment extends Fragment {
 
     RadioGroup rG;
     RadioButton r1, r2;
@@ -43,7 +35,7 @@ public class FirstFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_first, container, false);
+        View view = inflater.inflate(R.layout.fragment_color, container, false);
 
         rG = view.findViewById(R.id.radioGroup);
         r1 = view.findViewById(R.id.radio1);

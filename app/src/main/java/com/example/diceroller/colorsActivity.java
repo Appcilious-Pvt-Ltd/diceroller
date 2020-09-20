@@ -5,8 +5,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.example.diceroller.dicecount.ThreeDiceFragment;
-
 public class colorsActivity extends AppCompatActivity {
 
 
@@ -17,9 +15,9 @@ public class colorsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_colors);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if(savedInstanceState == null){
-            FirstFragment firstFragment = new FirstFragment();
+            ColorFragment colorFragment = new ColorFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.host_fragment, firstFragment).commit();
+            fragmentTransaction.add(R.id.host_fragment, colorFragment).commit();
         }
 
     }

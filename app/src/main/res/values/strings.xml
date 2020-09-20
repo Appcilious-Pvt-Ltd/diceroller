@@ -16,6 +16,23 @@
     <string name="red">R :</string>
     <string name="green">G :</string>
     <string name="blue">B :</string>
+    <string name="timerLabel">Timer</string>
+    <string name="rollLabel">Roll</string>
+    <string name="stopLabel">Stop Roll</string>
+    <string name="shortLabel">Short</string>
+    <string name="mediumLabel">Medium</string>
+    <string name="longLabel">Long</string>
+    <string name="oneDiceLabel">One</string>
+    <string name="twoDiceLabel">Two</string>
+    <string name="threeDiceLabel">Three</string>
+    <string name="fourDiceLabel">Four</string>
+    <string name="fiveDiceLabel">Five</string>
+    <string name="colorLabel">Color</string>
+    <string name="aboutUsLabel">About Us</string>
+    <string name="createdForLabel">Created For:</string>
+    <string name="nameLabel">Your Name</string>
+    <string name="datedLabel">On 9 20 2000</string>
+    <string name="projDetLabel">Mobile Application Development 4550</string>
     <string-array name="colorsList">
         <item>Red</item>
         <item>Green</item>

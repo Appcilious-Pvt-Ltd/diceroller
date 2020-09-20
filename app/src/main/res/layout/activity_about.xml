@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".aboutActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,10 +16,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Created For:"
+        android:text="@string/createdForLabel"
         android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
     <ImageView
         android:layout_width="120dp"
@@ -31,24 +31,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Name"
+        android:text="@string/nameLabel"
         android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mobile Application Development 4550"
+        android:text="@string/projDetLabel"
         android:gravity="center_horizontal"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="On 9 20 2000"
+        android:text="@string/datedLabel"
         android:gravity="center_horizontal"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
