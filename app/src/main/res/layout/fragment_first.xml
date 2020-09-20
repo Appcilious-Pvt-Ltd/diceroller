@@ -32,7 +32,7 @@
             android:text="@string/custom"
             android:textSize="25sp"
             android:checked="false"
-            android:padding="10dp"/>
+            android:padding="10dp" />
 
     </RadioGroup>
 
@@ -44,6 +44,7 @@
         android:visibility="visible" />
 
     <LinearLayout
+        android:id="@+id/custom_colors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -66,7 +67,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:max="255"
+                android:progress="0"/>
 
         </LinearLayout>
 
@@ -87,7 +90,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:max="255"
+                android:progress="0"/>
 
         </LinearLayout>
 
@@ -108,7 +113,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:max="255"
+                android:progress="0"/>
 
         </LinearLayout>
 
@@ -118,8 +125,8 @@
         android:id="@+id/colorShow"
         android:layout_width="230dp"
         android:layout_height="230dp"
-        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:background="@android:color/holo_red_dark" />
 
 </LinearLayout>
