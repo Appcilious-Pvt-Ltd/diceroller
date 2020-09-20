@@ -31,17 +31,17 @@
             <item
                 android:id="@+id/action_1sec"
                 android:orderInCategory="100"
-                android:title="1 sec"
+                android:title="Short"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/action_2sec"
                 android:orderInCategory="100"
-                android:title="2 sec"
+                android:title="Medium"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/action_3sec"
                 android:orderInCategory="100"
-                android:title="3 sec"
+                android:title="Long"
                 app:showAsAction="never" />
         </menu>
     </item>
