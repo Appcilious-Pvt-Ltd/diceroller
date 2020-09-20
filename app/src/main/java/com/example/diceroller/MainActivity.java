@@ -1,5 +1,6 @@
 package com.example.diceroller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -75,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
                 showFragment(new FiveDiceFragment());
                 break;
 
+            case R.id.action_dice_color :
+//                Toast.makeText(this, "Five Dice", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, colorsActivity.class);
+                startActivity(intent);
+                break;
+
             case R.id.action_1sec :
                 Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
                 break;
@@ -94,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     public void showFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-        fragmentTransaction.addToBackStack(null);
+        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
