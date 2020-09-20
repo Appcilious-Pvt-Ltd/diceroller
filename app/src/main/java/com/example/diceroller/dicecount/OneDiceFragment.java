@@ -47,12 +47,6 @@ public class OneDiceFragment extends Fragment {
 
         int id = item.getItemId();
         if(id == R.id.action_roll) {
-//            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
-//            roll.setVisibility(View.GONE);
-//            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
-//            t.setVisibility(View.GONE);
-//            ActionMenuItemView stop = getActivity().findViewById(R.id.action_stop);
-//            stop.setVisibility(View.VISIBLE);
             toolbar.getMenu().findItem(R.id.action_roll).setVisible(false);
             toolbar.getMenu().findItem(R.id.action_timer).setVisible(false);
             toolbar.getMenu().findItem(R.id.action_stop).setVisible(true);
@@ -63,6 +57,7 @@ public class OneDiceFragment extends Fragment {
                     new java.util.TimerTask() {
                         @Override
                         public void run() {
+                           changeUI();
                             timer.cancel();
                         }
                     },
@@ -71,13 +66,6 @@ public class OneDiceFragment extends Fragment {
             Log.d("Timer", "onOptionsItemSelected: Dice Rolled for secs" + time);
         }
         if(id == R.id.action_stop) {
-//            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
-//            roll.setVisibility(View.VISIBLE);
-//            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
-//            t.setVisibility(View.VISIBLE);
-//            ActionMenuItemView stop = getActivity().findViewById(R.id.action_stop);
-//            stop.setVisibility(View.GONE);
-
             toolbar.getMenu().findItem(R.id.action_roll).setVisible(true);
             toolbar.getMenu().findItem(R.id.action_timer).setVisible(true);
             toolbar.getMenu().findItem(R.id.action_stop).setVisible(false);
@@ -113,6 +101,17 @@ public class OneDiceFragment extends Fragment {
             rollDice();
         }
 
+    }
+
+    public void changeUI(){
+        requireActivity().runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+            toolbar.getMenu().findItem(R.id.action_roll).setVisible(true);
+            toolbar.getMenu().findItem(R.id.action_timer).setVisible(true);
+            toolbar.getMenu().findItem(R.id.action_stop).setVisible(false);
+        }
+    });
     }
 
 

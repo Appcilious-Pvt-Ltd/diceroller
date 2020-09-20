@@ -89,15 +89,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_1sec :
-                Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Roll Time  : 1 Sec", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.action_2sec :
-                Toast.makeText(this, "Roll Time  : 2 Sec", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Roll Time  : 2 Sec", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.action_3sec :
-                Toast.makeText(this, "Roll Time  : 3 Sec", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Roll Time  : 3 Sec", Toast.LENGTH_SHORT).show();
                 break;
         }
 

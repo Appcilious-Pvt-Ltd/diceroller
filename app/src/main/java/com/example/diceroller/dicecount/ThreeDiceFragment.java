@@ -2,6 +2,7 @@ package com.example.diceroller.dicecount;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -22,6 +23,7 @@ public class ThreeDiceFragment extends Fragment {
     ImageView diceImage1, diceImage2, diceImage3;
     Random random = new Random();
     int time = 1;
+    Toolbar toolbar;
     Timer timer;
     Integer[] images = {R.drawable.dice_1,R.drawable.dice_2,R.drawable.dice_3,R.drawable.dice_4,R.drawable.dice_5,R.drawable.dice_6};
 
@@ -31,6 +33,7 @@ public class ThreeDiceFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_three_dice, container, false);
         setHasOptionsMenu(true);
+        toolbar = getActivity().findViewById(R.id.toolbar);
 
         diceImage1 = view.findViewById(R.id.three_dice1);
         diceImage2 = view.findViewById(R.id.three_dice2);
@@ -44,13 +47,9 @@ public class ThreeDiceFragment extends Fragment {
 
         int id = item.getItemId();
         if(id == R.id.action_roll) {
-//            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
-//            roll.setVisibility(View.GONE);
-//            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
-//            t.setVisibility(View.GONE);
-//            ActionMenuItemView stop = getActivity().findViewById(R.id.action_stop);
-//            stop.setVisibility(View.VISIBLE);
-
+            toolbar.getMenu().findItem(R.id.action_roll).setVisible(false);
+            toolbar.getMenu().findItem(R.id.action_timer).setVisible(false);
+            toolbar.getMenu().findItem(R.id.action_stop).setVisible(true);
             timer = new Timer();
             timer.schedule(new ThreeDiceFragment.RollDice(),0, 100);
 
@@ -58,6 +57,7 @@ public class ThreeDiceFragment extends Fragment {
                     new java.util.TimerTask() {
                         @Override
                         public void run() {
+                            changeUI();
                             timer.cancel();
                         }
                     },
@@ -66,12 +66,9 @@ public class ThreeDiceFragment extends Fragment {
             Log.d("Timer", "onOptionsItemSelected: Dice Rolled for secs" + time);
         }
         if(id == R.id.action_stop){
-//            ActionMenuItemView roll = getActivity().findViewById(R.id.action_roll);
-//            roll.setVisibility(View.VISIBLE);
-//            ActionMenuItemView t = getActivity().findViewById(R.id.action_timer);
-//            t.setVisibility(View.VISIBLE);
-//            ActionMenuItemView stop = getActivity().findViewById(R.id.action_stop);
-//            stop.setVisibility(View.GONE);
+            toolbar.getMenu().findItem(R.id.action_roll).setVisible(true);
+            toolbar.getMenu().findItem(R.id.action_timer).setVisible(true);
+            toolbar.getMenu().findItem(R.id.action_stop).setVisible(false);
             timer.cancel();
         }
 
@@ -107,5 +104,15 @@ public class ThreeDiceFragment extends Fragment {
             rollDice();
         }
 
+    }
+    public void changeUI(){
+        requireActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                toolbar.getMenu().findItem(R.id.action_roll).setVisible(true);
+                toolbar.getMenu().findItem(R.id.action_timer).setVisible(true);
+                toolbar.getMenu().findItem(R.id.action_stop).setVisible(false);
+            }
+        });
     }
 }
