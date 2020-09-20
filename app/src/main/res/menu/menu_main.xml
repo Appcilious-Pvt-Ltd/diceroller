@@ -2,9 +2,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.diceroller.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
+        android:icon="@drawable/stop"
+        android:id="@+id/action_stop"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/stopLabel"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:icon="@drawable/roll"
+        android:id="@+id/action_roll"
+        android:orderInCategory="100"
+        android:title="@string/rollLabel"
+        app:showAsAction="always"
+        android:visible="true"/>
+    <item
+        android:icon="@drawable/timer"
+        android:id="@+id/action_timer"
+        android:orderInCategory="100"
+        android:title="@string/timerLabel"
+        app:showAsAction="always"
+        android:visible="true">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_1sec"
+                android:orderInCategory="100"
+                android:title="@string/shortLabel"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_2sec"
+                android:orderInCategory="100"
+                android:title="@string/mediumLabel"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_3sec"
+                android:orderInCategory="100"
+                android:title="@string/longLabel"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_one"
+        android:orderInCategory="100"
+        android:title="@string/oneDiceLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_two"
+        android:orderInCategory="100"
+        android:title="@string/twoDiceLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_three"
+        android:orderInCategory="100"
+        android:title="@string/threeDiceLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_four"
+        android:orderInCategory="100"
+        android:title="@string/fourDiceLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_five"
+        android:orderInCategory="100"
+        android:title="@string/fiveDiceLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dice_color"
+        android:orderInCategory="100"
+        android:title="@string/colorLabel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="100"
+        android:title="@string/aboutUsLabel"
         app:showAsAction="never" />
 </menu>
